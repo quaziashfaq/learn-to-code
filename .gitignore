@@ -1,5 +1,5 @@
 
-# Created by https://www.gitignore.io/api/c,c++,python,perl,opencv,vi,vim,cmake,emacs,linux,jupyternotebook
+# Created by https://www.gitignore.io/api/c,c++,python,perl,opencv,vi,vim,cmake,emacs,linux,jupyternotebook,codeblocks
 
 ### C ###
 # Prerequisites
@@ -85,6 +85,15 @@ install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
 build
+
+### CodeBlocks ###
+# specific to CodeBlocks IDE
+*.layout
+*.depend
+
+# generated directories
+bin/
+obj/
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
@@ -333,4 +342,4 @@ Session.vim
 # auto-generated tag files
 tags
 
-# End of https://www.gitignore.io/api/c,c++,python,perl,opencv,vi,vim,cmake,emacs,linux,jupyternotebook
+# End of https://www.gitignore.io/api/c,c++,python,perl,opencv,vi,vim,cmake,emacs,linux,jupyternotebook,codeblocks
