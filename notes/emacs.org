@@ -1,0 +1,49 @@
+#+STARTUP: hidestars
+#+STARTUP: indent
+
+I would like to store the process how I configure the emacs. I like Mr. Steve Purcell's emacs configuration. It's just awesome. It's easier to start with his as I am a newbie or I will never start learning Lisp. :-(
+
+# Go to your home directory
+
+$ git clone https://github.com/purcell/emacs.d.git
+
+# Then rename it
+
+$ mv emacs.d .emacs.d
+
+# Open Emacs. It will automatically download the required packages from the Elpa. Then from Emacs, install the Evil mode. I know ... Yes. It's Vi.. But it's good.
+
+M-x package-install RET evil RET
+
+# Then you have to write to some configuration file
+
+$ cd ~/.emacs.d/lisp
+$ vi init-evil.el
+
+;;; Enable TAB to cycle through orgmode Headers
+(setq evil-want-C-i-jump nil)
+
+;;; Enable Evil Mode
+(require 'evil)
+(evil-mode 1)
+
+(provide 'init-evil)
+;;; END
+
+# Then open a new file init-local.el
+
+$ cd ~/.emacs.d/lisp
+$ vi init-local.el
+
+;;; Visual Line Mode: To wrap long lines
+(global-visual-line-mode t)
+
+;;; Evil Mode enabled
+(require 'init-evil nil t)
+
+(provide 'init-local)
+;;; END
+
+# Done
+
+That's it for the time being. I hope you like it!
